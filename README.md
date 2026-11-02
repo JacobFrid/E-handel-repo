@@ -26,3 +26,14 @@ Result (January to June 2024):
 | 2024-06 | 590,259.89 |
 
 Total revenue for the period: 3,502,767.23. January had the highest revenue and March the lowest.
+
+# Average Order Value (AOV)
+-Added the average_order_value(df) function in src/metrics.py.
+-The function calculates total revenue divided by the number of unique orders.
+-Tested the function in report.ipynb using the sales dataset.
+
+Results:
+ . Total revenue: 3,502,767.23
+ . Number of orders: 2,500
+ . Average Order Value (AOV) : 1,401.11
+Tested successfully in report.ipynb.

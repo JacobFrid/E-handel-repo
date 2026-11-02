@@ -20,3 +20,11 @@ def revenue_by_month(df):
         .sum()  # add up the revenue for each month
         .sort_index()  # sort from the earliest month to the latest
     )
+
+def average_order_value(df):
+    # Function that calculates the average revenue per order
+    total_revenue = df["revenue"] .sum() # Calculate total revenue
+    number_of_orders = df["order_id"] .nunique() #  Count unique orders
+    if number_of_orders == 0: 
+        return 0   # Avoid division by zero
+    return total_revenue / number_of_orders  # Calculate AOV
