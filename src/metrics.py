@@ -9,6 +9,11 @@ def top_3_categories(df):
         .head(3)
     )
 
+def total_revenue(df):
+    return df["revenue"].sum()
+
+def total_units(df):
+    return df["units"].sum()
 
 def revenue_by_month(df):  
     # function that returns total revenue for each month
