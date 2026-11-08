@@ -28,3 +28,17 @@ def average_order_value(df):
     if number_of_orders == 0: 
         return 0   # Avoid division by zero
     return total_revenue / number_of_orders  # Calculate AOV
+
+def revenue_by_category(df):
+    # Group all rows by product category
+    # and calculate the total revenue for each category.
+    result = (
+        df.groupby("category")["revenue"]
+        .sum()
+        .sort_values(ascending=False)
+        .reset_index()
+    )
+
+    # Return the result containing all categories and thir revenue
+
+    return result
